@@ -1,19 +1,30 @@
-/*Faça um algoritmo que receba o nome e o valor de um produto qualquer, calcule e
-mostre o valor das prestações, sabendo que o seu valor é dividido em 5x sem juros.*/
-
 #include <stdio.h>
+#include <stdlib.h>
 
-int main (){
-    char nome[100];
-    float valor;
+//Faça um programa que leia quatro notas de um aluno, 
+//calcule a média e informe se o aluno foi aprovado ou reprovado. A média para aprovação é 7.
 
-    printf("Digite o nome do produto: ");
-    scanf("%99[^\n]", nome);
-    printf("Digite o valor do produto: ");
-    scanf("%f", &valor);
-
-    float parcela = valor / 5;
-    printf("O produto %s custa %.2f e pode ser parcelado em 5 vezes de %.2f\n", nome, valor, parcela);
+int main( int argc, char *argv[] )
+{
+    float nota1, nota2, nota3, nota4, media;
+    printf("Digite a primeira nota: ");
+    scanf("%f", &nota1);
+    printf("Digite a segunda nota: ");
+    scanf("%f", &nota2);
+    printf("Digite a terceira nota: ");
+    scanf("%f", &nota3);
+    printf("Digite a quarta nota: ");
+    scanf("%f", &nota4);
+    media = (nota1 + nota2 + nota3 + nota4) / 4;
+    printf("A media é: %.2f\n", media);
+    if (media >= 7)
+    {
+        printf("Aprovado\n");
+    }
+    else
+    {
+        printf("Reprovado\n");
+    }
+    system("pause");
     return 0;
 }
-

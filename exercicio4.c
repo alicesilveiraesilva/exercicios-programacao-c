@@ -1,17 +1,29 @@
-/*Faça um algoritmo que receba o preço de custo de um produto e a margem
-de lucro sobre o mesmo em porcentagem (%), calcule e mostre o preço de
-venda já com o lucro incluído.*/
+//o programa recebe 3 numeros e retorna o maior
 
 #include <stdio.h>
-#include <stdlib.h>
 int main()
 {
-    float preco_custo, margem_lucro, preco_venda;
-    printf("Digite o preco de custo do produto: ");
-    scanf("%f", &preco_custo);
-    printf("Digite a margem de lucro em porcentagem: ");
-    scanf("%f", &margem_lucro);
-    preco_venda = preco_custo + (preco_custo * (margem_lucro / 100));
-    printf("O preco de venda do produto com lucro incluido é: %.2f\n", preco_venda);
+    int num1, num2, num3;
+    printf("Primeiro número; ");
+    scanf("%d", &num1);
+    printf("Segundo número: ");
+    scanf("%d", &num2);
+    printf("Terceiro número: ");
+    scanf("%d", &num3);
+    if (num1 > num2 && num1 > num3)
+    {
+        printf("O maior número é: %d\n", num1);
+    }
+    else if (num2 > num1 && num2 > num3)            
+    {
+        printf("O maior número é: %d\n", num2);
+    }
+    else if (num3 > num1 && num3 > num2)
+    {
+        printf("O maior número é: %d\n", num3);
+    }
+    else
+    {
+        printf("Os números são iguais: %d\n", num1);
+    }
     return 0;
-}
